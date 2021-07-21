@@ -366,12 +366,12 @@ void CCmd::ChatCmd(CNetMsg_Cl_Say *Msg)
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "ViP: Get 3x Exp & 2x Money & 5 For killing spree");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Invis: +1 secounds, InvisCD: 20 secounds");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/prefix = +5 ammo + Special Dmg & 5 For killing spree");
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "1 month VIP = 0euros || 3 months VIP = 0euros || LifeTime VIP = 0euros");
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Payments: Name, name");
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Skype: nope, Name: nope");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "1 month VIP = 5euros || 3 months VIP = 10euros || LifeTime VIP = 15euros");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Discord: phenomx#2627");
+		
 		return;
 	}
-	else if (!strcmp(Msg->m_pMessage, "/supervip"))
+	/*else if (!strcmp(Msg->m_pMessage, "/supervip"))
 	{
 		LastChat();
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "--- SuperViP ---");
@@ -391,17 +391,17 @@ void CCmd::ChatCmd(CNetMsg_Cl_Say *Msg)
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "UltimateVIP: Get 7x Exp & 5x Money & 5 Score4Life & 2 For killing spree");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Invis: +5 secounds, InvisCD: 5 secounds");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/resetupgr - Reset your upgr & /ultimatemsg - Special messge");
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "1 month UltimateVIP = 0euros || 3 months UltimateVIP = 0euros || LifeTime UltimateVIP = 0euros");
+		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "1 month UltimateVIP = 5euros || 3 months UltimateVIP = 10euros || LifeTime UltimateVIP = 15euros");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Payments: Name, name");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Skype: nope, Name: nope");
 		return;
-	}
+	}*/
 	else if (!strcmp(Msg->m_pMessage, "/info"))
 	{
 		LastChat();
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "~~~~~~~~ Welcome to info! ~~~~~~~~");
 		char aBuf[128];
-		str_format(aBuf, sizeof(aBuf), "Owner: %s / Skype: %s", g_Config.m_SvOwnerName, g_Config.m_SvOwnerSkype);
+		str_format(aBuf, sizeof(aBuf), "Owner: %s / Discord: phenomx#2627", g_Config.m_SvOwnerName);
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), aBuf);
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "Panic mod by Kurosio, helper: nope");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "~~~~~~~~ Welcome to info! ~~~~~~~~");
@@ -417,8 +417,8 @@ void CCmd::ChatCmd(CNetMsg_Cl_Say *Msg)
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/pm - send personal message to player");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/cmdlist - commands server");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/vip - get info vip status");
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/supervip - get info supervip status");
-		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/ultimatevip - get info ultimatevip status");
+		//GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/supervip - get info supervip status");
+		//GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/ultimatevip - get info ultimatevip status");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/turret info - info about turrets");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/levels - info about level");
 		GameServer()->SendChatTarget(m_pPlayer->GetCID(), "/shop - shop score tees");
